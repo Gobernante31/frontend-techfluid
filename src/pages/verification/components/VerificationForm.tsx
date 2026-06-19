@@ -21,7 +21,14 @@ type VerificationFormProps = {
   };
   readonly onChange: (form: VerificationFormState) => void;
   readonly onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  readonly onFieldBlur?: (field: string) => void;
+  readonly onFieldBlur?: (
+    field:
+      | "name"
+      | "email"
+      | "documentNumber"
+      | "selfieImage"
+      | "documentImage",
+  ) => void;
 };
 
 export function VerificationForm(props: VerificationFormProps) {
